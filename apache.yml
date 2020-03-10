@@ -1,6 +1,6 @@
 ---
 - name: This sets up an httpd webserver
-  hosts: gfi
+  hosts: 10.1.1.240
   tasks:
   - name: Install apache packages 
     yum:
