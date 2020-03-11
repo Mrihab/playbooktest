@@ -8,6 +8,8 @@
             yum install java-1.8.0-openjdk -y
      changed_when: False
      register: java_result
-
+   - name: install java
+      shell: |
+       yum install java-1.8.0-openjdk -y
    - debug:
        msg: "{{ java_result.stdout }}"
