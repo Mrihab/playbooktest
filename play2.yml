@@ -4,6 +4,14 @@
     - name: install java
       shell: |
        yum install java-1.8.0-openjdk -y
+       
+       ANSIBLE_OUTPUT=$(ansible-playbook play2.yml -K)
+
+if [ $? != 0 ]; then
+    echo "playbook failed! OUTPUT: ${ANSIBLE_OUTPUT}" | mail -s "playbook results" rihab.messaoudi@esprit.tn
+else
+    echo "playbook executed successfully!" | mail -s "playbook results" rihab.messaoudi@esprit.tn
+fi
       
    
 
