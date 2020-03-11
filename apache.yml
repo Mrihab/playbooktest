@@ -1,9 +1,0 @@
-
----
-- hosts: 10.1.1.240
-  tasks:
-    - name: install java
-      shell: |
-       yum install java-1.8.0-openjdk -y
-      
-   
