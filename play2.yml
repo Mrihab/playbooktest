@@ -1,5 +1,5 @@
 ---
-- hosts: gfi
+- hosts: 10.1.1.240
   tasks:
     - name: install java
       shell: |
