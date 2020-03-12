@@ -1,4 +1,5 @@
 ---
+
 - hosts: 10.1.1.240
   tasks:
     - name: check packages for updates
