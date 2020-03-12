@@ -5,8 +5,7 @@
       shell: |
        yum install java-1.8.0-openjdk -y
        
-       ANSIBLE_OUTPUT=$(ansible-playbook play2.yml -K)
-
+      
 
    
 
