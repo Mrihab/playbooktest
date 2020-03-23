@@ -5,4 +5,15 @@
       shell: |
        yum install java-1.8.0-openjdk -y
        
-      
+    - name: Check if java is installed
+      register: java_installed
+      command: java -v
+      ignore_errors: true
+
+    - name: This task is only executed if java is installed
+      debug: var=java_install
+      when: java_installed|success
+
+   - name: This task is only executed if java is NOT installed
+     debug: msg='java is NOT installed'
+     when: java_installed|failed
